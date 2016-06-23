@@ -23,6 +23,9 @@
             <formline text="{Process group}">
 	            <textbox bind="[group]" />
             </formline>
+            <formline text="{Extras}">
+                <codearea bind="[extras]" width="400" height="150" />
+            </formline>
         </vc>
     </collapserow>
     <collapserow>

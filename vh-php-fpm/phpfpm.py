@@ -85,6 +85,9 @@ class PHPFPM (ApplicationGatewayComponent):
 
         extras = ''
 
+        for l in (backend.params.get('extras', None) or '').splitlines():
+            extras += '%s\n' % l.strip().strip(';')
+
         for l in (backend.params.get('php_admin_values', None) or '').splitlines():
             if '=' in l:
                 k, v = l.split('=', 1)
